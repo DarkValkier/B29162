@@ -1,5 +1,4 @@
-print('Hello World!')
-
-a = 2
-b = 3
-print(a + b)
+print('Калькулятор')
+a = int(input('Введите первое число:'))
+b = int(input('Введите второе число:'))
+print(f'{a} + {b} = {a + b}')
