@@ -16,6 +16,7 @@ while p1.hp > 0 and p2.hp > 0:
 '''
 import random
 
+# С вероятностью в 30%
 if random.randint(1, 100) <= 30:
     # Прокнуло
 else:

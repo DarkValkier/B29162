@@ -20,6 +20,7 @@ class Samurai(Character):
         self.combo_count += 1
         if self.combo_count > self.combo_max:
             self.combo_count = 0
+        # Как сделать то же самое одной строкой
         # self.combo_count = (self.combo_count + 1) % (self.combo_max + 1)
 
     def attack(self, target):
