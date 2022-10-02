@@ -12,3 +12,6 @@ class Item:
                 return None
             self.durability -= 1
         return self.stats
+
+
+class Weapon(Item):

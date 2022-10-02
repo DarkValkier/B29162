@@ -1,6 +1,11 @@
 from Lesson_1.character import Character
 from item import Item
+from enum import Enum, auto
 
+class CharacterStats(Enum):
+    HP = auto()
+    DAMAGE = auto()
+    DEFENCE = auto()
 
 class CharacterWithItems(Character):
     def __init__(self, name, hp, damage, defence):
@@ -16,7 +21,7 @@ class CharacterWithItems(Character):
 
     def attack(self, target):
         try:
-            additional_damage = self.weapon.use()['damage']
+            additional_damage = self.weapon.use()[CharacterStats.DAMAGE]
         except Exception as error:
             additional_damage = 0
         target.take_damage(self.damage + additional_damage)

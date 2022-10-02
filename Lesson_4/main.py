@@ -1,11 +1,17 @@
 from character import CharacterWithItems
 from item import Item
+from character import CharacterStats as stat
 
-potion1 = Item('Зелье силы', stats={'damage': 2})
-weapon1 = Item('Стальной меч', stats={'damage': 4},
+potion1 = Item('Зелье силы',
+               stats={
+                   stat.DAMAGE: 2,
+                   stat.DEFENCE: 2
+               })
+weapon1 = Item('Стальной меч', stats={stat.DAMAGE: 4},
                durability=1)
-armor1 = Item('Кожанная броня', stats={'armor': 2},
+armor1 = Item('Кожанная броня', stats={stat.DEFENCE: 2},
               durability=400)
+
 
 player1 = CharacterWithItems(
     name='Vasya', hp=30, damage=1, defence=0)
