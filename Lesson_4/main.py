@@ -13,17 +13,13 @@ player2 = CharacterWithItems(
     name='Petya', hp=30, damage=1, defence=0)
 
 player1.set_weapon(weapon1)
-print(player1)
-print(player2)
-
-player1.attack(player2)
-player2.attack(player1)
 
 print(player1)
 print(player2)
 
-player1.attack(player2)
-player2.attack(player1)
+while player1.hp > 0 and player2.hp > 0:
+    player1.attack(player2)
+    player2.attack(player1)
 
-print(player1)
-print(player2)
+    print(player1)
+    print(player2)
