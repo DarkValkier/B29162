@@ -15,14 +15,12 @@
 
    - **Принцип работы:** должен возвращать строку, в которой перечисляются все поля класса и их значения на данный момент.
 
-Пример метода \_\_str\_\_ для класса [Character](https://github.com/DarkValkier/C29246/blob/master/Lesson_1/character.py#L20):
+Пример метода \_\_str\_\_ для класса [Character](https://github.com/DarkValkier/B29162/blob/master/Lesson_1/character.py#L9):
 ```python
 def __str__(self):
-        return \
-            f' === {self.name} ===\n' \
-            f' Здоровье: {self.hp} / {self.max_hp}\n' \
-            f' Урон: {self.damage}\n' \
-            f' Защита: {self.defence}\n'
+        return f'{self.name} (hp:{self.hp},' \
+               f' damage:{self.damage},' \
+               f' defence: {self.defence})'
 ```
 
 2. **change_state**
@@ -36,7 +34,7 @@ def __str__(self):
       - Если `настроение` падает ниже нуля — человек впал в депрессию;
       - Если `деньги` падают ниже нуля — человек обанкротился.
 
-Для каждой ошибки в методе `change_state` создать отдельный класс, унаследованный от класса Exception (аналогично классу [NegativeDamage](https://github.com/DarkValkier/C29246/blob/master/Lesson_2/main.py#L1) из [второго урока](https://github.com/DarkValkier/C29246/tree/master/Lesson_2)).
+Для каждой ошибки в методе `change_state` создать отдельный класс, унаследованный от класса Exception (аналогично классам [NegativeDistance](https://github.com/DarkValkier/B29162/blob/master/Lesson_3/car.py#L6) и [NotEnothFuel](https://github.com/DarkValkier/B29162/blob/master/Lesson_3/car.py#L1) из [третьего урока](https://github.com/DarkValkier/B29162/tree/master/Lesson_3)).
 
   Пример использования метода `change_state`:
   ```python
